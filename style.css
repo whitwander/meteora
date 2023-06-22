@@ -1,0 +1,27 @@
+@import url(styles/cabeçalho.css);
+@import url(styles/banners.css);
+@import url(styles/categorias.css);
+@import url(styles/facilidades.css);
+@import url(styles/cadastro.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --fonte-principal: 'Inter';
+    --preto: #000000; 
+    --branco: #FFFFFF;
+    --preto-texto: #212529;
+    --cor-link: #9353FF;
+    --cor-facilidades: #DAFF01;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 16px;
+}

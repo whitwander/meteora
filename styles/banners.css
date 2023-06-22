@@ -1,0 +1,32 @@
+.banner__desktop {
+    width: 100%;
+}
+
+.banner__tablet,
+.banner__mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .banner__desktop,
+    .banner__mobile {
+        display: none;
+    }
+
+    .banner__tablet{
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .banner__desktop,
+    .banner__tablet {
+        display: none;
+    }
+
+    .banner__mobile {
+        display: block;
+        width: 100%;
+    }
+}

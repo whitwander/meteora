@@ -1,0 +1,67 @@
+.facilidades {
+    background-color: var(--preto);
+    padding: 3em;
+    margin-top: 4em;
+}
+
+.facilidades__titulo {
+    text-align: center;   
+    font-size: 32px;
+    font-weight: 500; 
+    color: var(--branco);
+    margin-bottom: 1em;
+}
+
+.facilidades__container {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+}
+
+.facilidades__desc {
+    display: flex;
+    width: 20%;
+    margin-top: 2em;
+}
+
+.facilidades__imagem {
+    margin-right: 1em;
+}
+
+.container__titulo {
+    color: var(--cor-facilidades);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.container__texto {
+    color: var(--branco);
+    font-size: 13px;
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .facilidades__titulo{
+        font-size: 32px;
+    }  
+
+    .facilidades__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .facilidades__desc {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .facilidades__titulo{
+        font-size: 24px;
+    } 
+
+    .facilidades__desc {
+        width: 100%;
+    }
+}

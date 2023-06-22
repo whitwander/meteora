@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="cabeçalho">
+        <nav class="cabeçalho__navegação">
+            <div>
+                <img class="cabeçalho__logo" src="./assets/Logo desktop.svg" alt="Logo meteora">
+                <a class="cabeçalho__item" href="#">Home</a>
+                <a class="cabeçalho__item" href="#">Nossas Lojas</a>
+                <a class="cabeçalho__item" href="#">Novidades</a>
+                <a class="cabeçalho__item" href="#">Promoções</a>
+            </div>
+            <div>
+                <input class="cabeçalho__input" type="search" placeholder="Digite o Produto">
+                <button class="cabeçalho__botão">Buscar</button>
+            </div>
+            <img class="menu" src="/assets/Hambúrguer.svg" alt="Menu">
+        </nav>
+    </header>
+
+    <div class="pesquisa__mobile">
+        <input class="cabeçalho__input-mobile" type="search" placeholder="Digite o Produto">
+        <button class="cabeçalho__botão-mobile">Buscar</button>
+    </div>
+
+    <div class="banners">
+        <img class="banner__desktop" src="assets/Banner Desktop.svg" alt="Banner Meteora">
+        <img class="banner__tablet" src="assets/Banner Tablet.svg" alt="Banner Meteora">
+        <img class="banner__mobile" src="assets/Banner Mobile.svg" alt="Banner Meteora">
+    </div>
+
+    <section class="categorias">
+        <h1>Busque por categoria</h1>
+        <div class="categorias__topicos">
+            <a class="topicos-grid1" href="#">
+                <img class="categorias__imagens" src="assets/Categoria Camisetas.svg" alt="Camisetas">
+                <p class="categorias__item">Camisetas</p>
+            </a>
+            <a class="topicos-grid2" href="#">
+                <img class="categorias__imagens" src="assets/Categoria Bolsa.svg" alt="Bolsas">
+                <p class="categorias__item">Bolsas</p>
+            </a>
+            <a class="topicos-grid3" href="#">
+                <img class="categorias__imagens" src="./assets/Categoria Calçados.svg" alt="Calçados">
+                <p class="categorias__item">Calçados</p>
+            </a>
+            <a class="topicos-grid4" href="#">
+                <img class="categorias__imagens" src="assets/Categorias Calças.svg" alt="Calças">
+                <p class="categorias__item">Calças</p>
+            </a>
+            <a class="topicos-grid5" href="#">
+                <img class="categorias__imagens" src="assets/Categoria Casacos.svg" alt="Casacos">
+                <p class="categorias__item">Casacos</p>
+            </a>
+            <a class="topicos-grid6" href="#">
+                <img class="categorias__imagens" src="assets/Categorias Óculos.svg" alt="Óculos">
+                <p class="categorias__item">Óculos</p>
+            </a>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="produtos__titulo-principal">Produtos que estão bombando!</h2>
+        <div class="produtos__grid">
+            <div class="produtos__mostra camiseta-grid">
+                <img class="produtos__foto" src="./assets/Camiseta mostra.svg" alt="Camiseta Conforto">
+                <div class="produtos__descrição">
+                    <h3 class="produtos__titulo">Camiseta Conforto</h3>
+                    <p class="produtos__texto">Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão.
+                        Modelagem unissex.</p>
+                    <p class="produtos__preço">R$ 70,00</p>
+                    <a class="produtos__link" href="#">Ver mais</a>
+                </div>
+            </div>
+            <div class="produtos__mostra calça-grid">
+                <img class="produtos__foto" src="./assets/Calça mostra.svg" alt="Calça Alfaiataria">
+                <div class="produtos__descrição">
+                    <h3 class="produtos__titulo">Calça Alfaiataria</h3>
+                    <p class="produtos__texto">Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!</p>
+                    <p class="produtos__preço">R$ 180,00</p>
+                    <a class="produtos__link" href="#">Ver mais</a>
+                </div>
+            </div>
+            <div class="produtos__mostra tênis-grid">
+                <img class="produtos__foto" src="./assets/Tenis mostra.svg" alt="Tênis Chinky">
+                <div class="produtos__descrição">
+                    <h3 class="produtos__titulo">Tênis Chinky</h3>
+                    <p class="produtos__texto">Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.
+                    </p>
+                    <p class="produtos__preço">R$ 250,00</p>
+                    <a class="produtos__link" href="#">Ver mais</a>
+                </div>
+            </div>
+            <div class="produtos__mostra jaqueta-grid">
+                <img class="produtos__foto" src="./assets/Jaqueta mostra.svg" alt="Jaqueta James">
+                <div class="produtos__descrição">
+                    <h3 class="produtos__titulo">Jaqueta James</h3>
+                    <p class="produtos__texto">Modelo unissex oversized com gola de camurça. Atemporal e autêntica!</p>
+                    <p class="produtos__preço">R$ 150,00</p>
+                    <a class="produtos__link" href="#">Ver mais</a>
+                </div>
+            </div>
+            <div class="produtos__mostra óculos-grid">
+                <img class="produtos__foto" src="./assets/óculos mostra.svg" alt="Óculos Redondo">
+                <div class="produtos__descrição">
+                    <h3 class="produtos__titulo">Óculos Redondo</h3>
+                    <p class="produtos__texto">Armação metálica em grafite com lentes arredondadas. Sem erro!</p>
+                    <p class="produtos__preço">R$ 120,00</p>
+                    <a class="produtos__link" href="#">Ver mais</a>
+                </div>
+            </div>
+            <div class="produtos__mostra bolsa-grid">
+                <img class="produtos__foto" src="./assets/Bolsa mostra.svg" alt="Bolsa Coringa">
+                <div class="produtos__descrição">
+                    <h3 class="produtos__titulo">Bolsa Coringa</h3>
+                    <p class="produtos__texto">Bolsa camel em couro sintético de alta duração. Ideal para acompanhar
+                        você por uma vida!</p>
+                    <p class="produtos__preço">R$ 120,00</p>
+                    <a class="produtos__link" href="#">Ver mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="facilidades">
+        <h2 class="facilidades__titulo">Conheça todas as nossas facilidades</h2>
+        <div class="facilidades__container">
+            <div class="facilidades__desc">
+                <img class="facilidades__imagem" src="./assets/x-diamond.svg" alt="Pix">
+                <div>
+                    <h3 class="container__titulo">PAGUE PELO PIX</h3>
+                    <p class="container__texto">Ganhe 5% OFF em pagamentos via PIX.</p>
+                </div>
+            </div>
+            <div class="facilidades__desc">
+                <img class="facilidades__imagem" src="./assets/arrow-repeat.svg" alt="Troca Grátis">
+                <div>
+                    <h3 class="container__titulo">TROCA GRÁTIS</h3>
+                    <p class="container__texto">Fique livre para trocar em até 30 dias.</p>
+                </div>
+            </div>
+            <div class="facilidades__desc">
+                <img class="facilidades__imagem" src="./assets/flower.svg" alt="Sustentabilidade">
+                <div>
+                    <h3 class="container__titulo">SUSTENTABILIDADE</h3>
+                    <p class="container__texto">Modo responsável, que respeita o meio ambiente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cadastro">
+        <div class="cadastro__box">
+            <p class="cadastro__texto">Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira
+                compra? <span>Cadastre-se!</span></p>
+            <div>
+                <input class="cadastro__input" type="email" placeholder="Digite seu email">
+                <button class="cadastro__botão">Enviar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <p>2023 © Desenvolvido por Alura | Projeto fictício sem fins comerciais.</p>
+    </footer>
+</body>
+
+</html>
