@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meteora</title>
+    <link rel="icon" href="assets/Favicon-64px.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modais.html">
+</head>
 </head>
 
 <body>
@@ -18,7 +23,7 @@
                 <a class="cabeçalho__item" href="#">Novidades</a>
                 <a class="cabeçalho__item" href="#">Promoções</a>
             </div>
-            <div>
+            <div class="cabeçalho__pesquisa">
                 <input class="cabeçalho__input" type="search" placeholder="Digite o Produto">
                 <button class="cabeçalho__botão">Buscar</button>
             </div>
@@ -32,9 +37,52 @@
     </div>
 
     <div class="banners">
-        <img class="banner__desktop" src="assets/Banner Desktop.svg" alt="Banner Meteora">
-        <img class="banner__tablet" src="assets/Banner Tablet.svg" alt="Banner Meteora">
-        <img class="banner__mobile" src="assets/Banner Mobile.svg" alt="Banner Meteora">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img class="banner__desktop" src="assets/Banner Desktop.svg" alt="">
+                    <img class="banners-tablet" src="assets/Banner Tablet.svg" alt="">
+                    <img class="banners-mobile" src="assets/Banner Mobile.svg" alt="">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="banner__desktop" src="assets/banner 2 desktop.svg" alt="">
+                    <img class="banners-tablet" src="assets/banner tablet 2.svg" alt="">
+                    <img class="banners-mobile" src="assets/banner mobile2.svg" alt="">
+                    <h2 class="banner__titulo">COLEÇÃO ATEMPORAL</h2>
+                    <p class="banner__texto">Estilo e qualidade pra durar.</p>
+                </div>
+
+                <div class="carousel-item">
+                    <img class="banner__desktop" src="assets/banner 3 desktop.svg" class="d-block w-100" alt="...">
+                    <img class="banners-tablet" src="assets/banner tablet 3.svg" alt="">
+                    <img class="banners-mobile" src="assets/banner mobile3.svg" alt="">
+                    <h2 class="banner__titulo2">COLEÇÃO ATEMPORAL</h2>
+                    <p class="banner__texto2">Alto impacto visual, baixo impacto ambiental!</p>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
 
     <section class="categorias">
@@ -77,7 +125,8 @@
                     <p class="produtos__texto">Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão.
                         Modelagem unissex.</p>
                     <p class="produtos__preço">R$ 70,00</p>
-                    <a class="produtos__link" href="#">Ver mais</a>
+                    <button class="produtos__link" data-bs-toggle="modal" data-bs-target="#modal-camiseta">Ver
+                        mais</button>
                 </div>
             </div>
             <div class="produtos__mostra calça-grid">
@@ -86,7 +135,8 @@
                     <h3 class="produtos__titulo">Calça Alfaiataria</h3>
                     <p class="produtos__texto">Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!</p>
                     <p class="produtos__preço">R$ 180,00</p>
-                    <a class="produtos__link" href="#">Ver mais</a>
+                    <button class="produtos__link" data-bs-toggle="modal" data-bs-target="#modal-calça">Ver
+                        mais</button>
                 </div>
             </div>
             <div class="produtos__mostra tênis-grid">
@@ -96,7 +146,8 @@
                     <p class="produtos__texto">Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.
                     </p>
                     <p class="produtos__preço">R$ 250,00</p>
-                    <a class="produtos__link" href="#">Ver mais</a>
+                    <button class="produtos__link" data-bs-toggle="modal" data-bs-target="#modal-tênis">Ver
+                        mais</button>
                 </div>
             </div>
             <div class="produtos__mostra jaqueta-grid">
@@ -105,7 +156,8 @@
                     <h3 class="produtos__titulo">Jaqueta James</h3>
                     <p class="produtos__texto">Modelo unissex oversized com gola de camurça. Atemporal e autêntica!</p>
                     <p class="produtos__preço">R$ 150,00</p>
-                    <a class="produtos__link" href="#">Ver mais</a>
+                    <button class="produtos__link" data-bs-toggle="modal" data-bs-target="#modal-jaqueta">Ver
+                        mais</button>
                 </div>
             </div>
             <div class="produtos__mostra óculos-grid">
@@ -114,7 +166,8 @@
                     <h3 class="produtos__titulo">Óculos Redondo</h3>
                     <p class="produtos__texto">Armação metálica em grafite com lentes arredondadas. Sem erro!</p>
                     <p class="produtos__preço">R$ 120,00</p>
-                    <a class="produtos__link" href="#">Ver mais</a>
+                    <button class="produtos__link" data-bs-toggle="modal" data-bs-target="#modal-óculos">Ver
+                        mais</button>
                 </div>
             </div>
             <div class="produtos__mostra bolsa-grid">
@@ -124,7 +177,8 @@
                     <p class="produtos__texto">Bolsa camel em couro sintético de alta duração. Ideal para acompanhar
                         você por uma vida!</p>
                     <p class="produtos__preço">R$ 120,00</p>
-                    <a class="produtos__link" href="#">Ver mais</a>
+                    <button class="produtos__link" data-bs-toggle="modal" data-bs-target="#modal-bolsa">Ver
+                        mais</button>
                 </div>
             </div>
         </div>
@@ -163,7 +217,8 @@
                 compra? <span>Cadastre-se!</span></p>
             <div>
                 <input class="cadastro__input" type="email" placeholder="Digite seu email">
-                <button class="cadastro__botão">Enviar</button>
+                <button type="button" class="cadastro__botão" data-bs-toggle="modal"
+                    data-bs-target="#cadastro-email">Enviar</button>
             </div>
         </div>
     </section>
@@ -171,6 +226,443 @@
     <footer class="rodape">
         <p>2023 © Desenvolvido por Alura | Projeto fictício sem fins comerciais.</p>
     </footer>
+
+    <div class="modal fade" id="cadastro-email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="cadastro__modal">
+                <div class="cadastro__modal-cabeçalho">
+                    <img class="ms-2" src="./assets/Vector.svg" alt="">
+                    <p class="mt-3 px-3">E-mail cadastrado com sucesso!</p>
+                </div>
+                <div class="x">
+                    <img class="pointer" data-bs-dismiss="modal" src="./assets/bx-x.svg" alt="">
+                </div>
+            </div>
+            <div class="cadastro__modal-desc">
+                <p>Em breve você receberá novidades exclusivas da Meteora.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="todos-modais">
+        <div class="modal fade" id="modal-camiseta" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal__completo">
+                <div class="modal-content">
+                    <div class="modal-header modal__cabeçalho">
+                        <div class="modal__cabeçalho-titulo">
+                            <img src="assets/Vector.svg" alt="">
+                            <h4 class="modal__titulo">Confira detalhes sobre o produto</h4>
+                        </div>
+                        <button type="button" class="btn-close modal__botão-fechar" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal__principal">
+                        <div>
+                            <img class="modal__imagem" src="assets/Camiseta mostra.svg" alt="">
+                        </div>
+                        <form class="formulário">
+                            <h5 class="modal__titulo-descrição">Camiseta Conforto</h5>
+                            <p class="modal__descrição">Multicores e tamanhos. Tecido de algodão 100%, frequinho para o
+                                verão. Modelagem unissex.</p>
+                            <h3 class="modal__preço">R$ 70,00</h3>
+                            <a class="modal__link" href="https://www.riachuelo.com.br/?gclid=Cj0KCQjwtO-kBhDIARIsAL6LorfeU0ZXIScCkCdXPg7f1havRLVr_vqte-VQAGusW4ja5Y8CccWI7D4aAjf-EALw_wcB">Vendido e entregue por Riachuelo</a>
+                            <p class="titulo__seletores">Cores:</p>
+                            <fieldset class="seletores">
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="azcl">
+                                    <label for="azcl">Azul Claro</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="ofwh">
+                                    <label for="ofwh">Offwhite</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="pret">
+                                    <label for="pret">Preto</label>
+                                </div>
+                            </fieldset>
+                            <p class="titulo__seletores">Tamanho:</p>
+                            <fieldset class="seletores2">
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">P</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">PP</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">M</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">G</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">GG</label>
+                                </div>
+                            </fieldset>
+                            <button type="button" class="botão__modal" data-bs-dismiss="modal">Adicionar à sacola</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-calça" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal__completo">
+                <div class="modal-content">
+                    <div class="modal-header modal__cabeçalho">
+                        <div class="modal__cabeçalho-titulo">
+                            <img src="assets/Vector.svg" alt="">
+                            <h4 class="modal__titulo">Confira detalhes sobre o produto</h4>
+                        </div>
+                        <button type="button" class="btn-close modal__botão-fechar" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal__principal">
+                        <div>
+                            <img class="modal__imagem" src="assets/Calça mostra.svg" alt="">
+                        </div>
+                        <form class="formulário">
+                            <h5 class="modal__titulo-descrição">Calça Alfaiataria</h5>
+                            <p class="modal__descrição">Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!</p>
+                            <h3 class="modal__preço">R$ 180,00</h3>
+                            <a class="modal__link" href="https://www.riachuelo.com.br/?gclid=Cj0KCQjwtO-kBhDIARIsAL6LorfeU0ZXIScCkCdXPg7f1havRLVr_vqte-VQAGusW4ja5Y8CccWI7D4aAjf-EALw_wcB">Vendido e entregue por Riachuelo</a>
+                            <p class="titulo__seletores">Cores:</p>
+                            <fieldset class="seletores">
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="azcl">
+                                    <label for="azcl">Azul Claro</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="ofwh">
+                                    <label for="ofwh">Offwhite</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="pret">
+                                    <label for="pret">Preto</label>
+                                </div>
+                            </fieldset>
+                            <p class="titulo__seletores">Tamanho:</p>
+                            <fieldset class="seletores2">
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">P</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">PP</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">M</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">G</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">GG</label>
+                                </div>
+                            </fieldset>
+                            <button type="button" class="botão__modal" data-bs-dismiss="modal">Adicionar à sacola</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-tênis" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal__completo">
+                <div class="modal-content">
+                    <div class="modal-header modal__cabeçalho">
+                        <div class="modal__cabeçalho-titulo">
+                            <img src="assets/Vector.svg" alt="">
+                            <h4 class="modal__titulo">Confira detalhes sobre o produto</h4>
+                        </div>
+                        <button type="button" class="btn-close modal__botão-fechar" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal__principal">
+                        <div>
+                            <img class="modal__imagem" src="assets/Tenis mostra.svg" alt="">
+                        </div>
+                        <form class="formulário">
+                            <h5 class="modal__titulo-descrição">Tênis Chinky</h5>
+                            <p class="modal__descrição">Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.
+                            </p>
+                            <h3 class="modal__preço">R$ 250,00</h3>
+                            <a class="modal__link" href="https://www.riachuelo.com.br/?gclid=Cj0KCQjwtO-kBhDIARIsAL6LorfeU0ZXIScCkCdXPg7f1havRLVr_vqte-VQAGusW4ja5Y8CccWI7D4aAjf-EALw_wcB">Vendido e entregue por Riachuelo</a>
+                            <p class="titulo__seletores">Cores:</p>
+                            <fieldset class="seletores">
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="azcl">
+                                    <label for="azcl">Azul Claro</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="ofwh">
+                                    <label for="ofwh">Offwhite</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="pret">
+                                    <label for="pret">Preto</label>
+                                </div>
+                            </fieldset>
+                            <p class="titulo__seletores">Tamanho:</p>
+                            <fieldset class="seletores2">
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">P</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">PP</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">M</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">G</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">GG</label>
+                                </div>
+                            </fieldset>
+                            <button type="button" class="botão__modal" data-bs-dismiss="modal">Adicionar à sacola</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-jaqueta" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal__completo">
+                <div class="modal-content">
+                    <div class="modal-header modal__cabeçalho">
+                        <div class="modal__cabeçalho-titulo">
+                            <img src="assets/Vector.svg" alt="">
+                            <h4 class="modal__titulo">Confira detalhes sobre o produto</h4>
+                        </div>
+                        <button type="button" class="btn-close modal__botão-fechar" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal__principal">
+                        <div>
+                            <img class="modal__imagem" src="assets/Jaqueta mostra.svg" alt="">
+                        </div>
+                        <form class="formulário">
+                            <h5 class="modal__titulo-descrição">Jaqueta James</h5>
+                            <p class="modal__descrição">Modelo unissex oversized com gola de camurça. Atemporal e autêntica!</p>
+                            <h3 class="modal__preço">R$ 150,00</h3>
+                            <a class="modal__link" href="https://www.riachuelo.com.br/?gclid=Cj0KCQjwtO-kBhDIARIsAL6LorfeU0ZXIScCkCdXPg7f1havRLVr_vqte-VQAGusW4ja5Y8CccWI7D4aAjf-EALw_wcB">Vendido e entregue por Riachuelo</a>
+                            <p class="titulo__seletores">Cores:</p>
+                            <fieldset class="seletores">
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="azcl">
+                                    <label for="azcl">Azul Claro</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="ofwh">
+                                    <label for="ofwh">Offwhite</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="pret">
+                                    <label for="pret">Preto</label>
+                                </div>
+                            </fieldset>
+                            <p class="titulo__seletores">Tamanho:</p>
+                            <fieldset class="seletores2">
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">P</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">PP</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">M</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">G</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">GG</label>
+                                </div>
+                            </fieldset>
+                            <button type="button" class="botão__modal" data-bs-dismiss="modal">Adicionar à sacola</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-bolsa" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal__completo">
+                <div class="modal-content">
+                    <div class="modal-header modal__cabeçalho">
+                        <div class="modal__cabeçalho-titulo">
+                            <img src="assets/Vector.svg" alt="">
+                            <h4 class="modal__titulo">Confira detalhes sobre o produto</h4>
+                        </div>
+                        <button type="button" class="btn-close modal__botão-fechar" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal__principal">
+                        <div>
+                            <img class="modal__imagem" src="assets/Bolsa mostra.svg" alt="">
+                        </div>
+                        <form class="formulário">
+                            <h5 class="modal__titulo-descrição">Bolsa Coringa</h5>
+                            <p class="modal__descrição">Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!</p>
+                            <h3 class="modal__preço">R$ 120,00</h3>
+                            <a class="modal__link" href="https://www.riachuelo.com.br/?gclid=Cj0KCQjwtO-kBhDIARIsAL6LorfeU0ZXIScCkCdXPg7f1havRLVr_vqte-VQAGusW4ja5Y8CccWI7D4aAjf-EALw_wcB">Vendido e entregue por Riachuelo</a>
+                            <p class="titulo__seletores">Cores:</p>
+                            <fieldset class="seletores">
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="azcl">
+                                    <label for="azcl">Azul Claro</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="ofwh">
+                                    <label for="ofwh">Offwhite</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="cor" id="pret">
+                                    <label for="pret">Preto</label>
+                                </div>
+                            </fieldset>
+                            <p class="titulo__seletores">Tamanho:</p>
+                            <fieldset class="seletores2">
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">P</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">PP</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">M</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">G</label>
+                                </div>
+                                <div class="seletores-items">
+                                    <input type="radio" name="tam" id="p">
+                                    <label for="p">GG</label>
+                                </div>
+                            </fieldset>
+                            <button type="button" class="botão__modal" data-bs-dismiss="modal">Adicionar à sacola</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="modal-óculos" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal__completo">
+            <div class="modal-content">
+                <div class="modal-header modal__cabeçalho">
+                    <div class="modal__cabeçalho-titulo">
+                        <img src="assets/Vector.svg" alt="">
+                        <h4 class="modal__titulo">Confira detalhes sobre o produto</h4>
+                    </div>
+                    <button type="button" class="btn-close modal__botão-fechar" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body modal__principal">
+                    <div>
+                        <img class="modal__imagem" src="assets/óculos mostra.svg" alt="">
+                    </div>
+                    <form class="formulário">
+                        <h5 class="modal__titulo-descrição">Óculos Redondo</h5>
+                        <p class="modal__descrição">Armação metálica em grafite com lentes arredondadas. Sem erro!</p>
+                        <h3 class="modal__preço">R$ 120,00</h3>
+                        <a class="modal__link" href="https://www.riachuelo.com.br/?gclid=Cj0KCQjwtO-kBhDIARIsAL6LorfeU0ZXIScCkCdXPg7f1havRLVr_vqte-VQAGusW4ja5Y8CccWI7D4aAjf-EALw_wcB">Vendido e entregue por Riachuelo</a>
+                        <p class="titulo__seletores">Cores:</p>
+                        <fieldset class="seletores">
+                            <div class="seletores-items">
+                                <input type="radio" name="cor" id="azcl">
+                                <label for="azcl">Azul Claro</label>
+                            </div>
+                            <div class="seletores-items">
+                                <input type="radio" name="cor" id="ofwh">
+                                <label for="ofwh">Offwhite</label>
+                            </div>
+                            <div class="seletores-items">
+                                <input type="radio" name="cor" id="pret">
+                                <label for="pret">Preto</label>
+                            </div>
+                        </fieldset>
+                        <p class="titulo__seletores">Tamanho:</p>
+                        <fieldset class="seletores2">
+                            <div class="seletores-items">
+                                <input type="radio" name="tam" id="p">
+                                <label for="p">P</label>
+                            </div>
+                            <div class="seletores-items">
+                                <input type="radio" name="tam" id="p">
+                                <label for="p">PP</label>
+                            </div>
+                            <div class="seletores-items">
+                                <input type="radio" name="tam" id="p">
+                                <label for="p">M</label>
+                            </div>
+                            <div class="seletores-items">
+                                <input type="radio" name="tam" id="p">
+                                <label for="p">G</label>
+                            </div>
+                            <div class="seletores-items">
+                                <input type="radio" name="tam" id="p">
+                                <label for="p">GG</label>
+                            </div>
+                        </fieldset>
+                        <button type="button" class="botão__modal" data-bs-dismiss="modal">Adicionar à sacola</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+
 </body>
+
+
 
 </html>

@@ -1,32 +1,125 @@
+.banners-tablet,
+.banners-mobile {
+    display: none;
+}
+
 .banner__desktop {
     width: 100%;
 }
 
-.banner__tablet,
-.banner__mobile {
-    display: none;
+.banner__titulo,
+.banner__titulo2,
+.banner__texto,
+.banner__texto2 {
+    position: absolute;
+    color: var(--branco);
+}
+
+.banner__titulo {
+    top: 45%;
+    right: 20%;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.banner__texto {
+    top: 55%;
+    right: 20%;
+    font-size: 1.25rem;
+}
+
+.banner__titulo2 {
+    top: 45%;
+    left: 20%;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.banner__texto2 {
+    top: 55%;
+    left: 20%;
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .banner__titulo,
+    .banner__titulo2 {
+        font-size: 2rem;
+    }
+
+    .banner__texto,
+    .banner__texto2 {
+        font-size: 0.9rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
+
     .banner__desktop,
-    .banner__mobile {
+    .banners-mobile {
         display: none;
     }
 
-    .banner__tablet{
+    .banners-tablet {
         display: block;
         width: 100%;
+    }
+
+    .banner__titulo,
+    .banner__titulo2 {
+        font-size: 1.8rem;
+    }
+
+    .banner__texto,
+    .banner__texto2 {
+        font-size: 0.8rem;
+    }
+
+    .banner__titulo,
+    .banner__texto {
+        right: 10%;
+    }
+
+    .banner__titulo2,
+    .banner__texto2 {
+        left: 10%;
     }
 }
 
 @media screen and (max-width: 425px) {
+
     .banner__desktop,
-    .banner__tablet {
+    .banners-tablet {
         display: none;
     }
 
-    .banner__mobile {
-        display: block;
+    .banners-mobile {
+        display: flex;
         width: 100%;
+    }
+
+    .banner__titulo,
+    .banner__titulo2 {
+        font-size: 2rem;
+        top: 55%;
+        width: 80%;
+        text-align: center;
+    }
+
+    .banner__texto,
+    .banner__texto2 {
+        font-size: 1rem;
+        top: 73%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .banner__texto {
+        right: 0;
+    }
+
+    .banner__texto2 {
+        left: 0;
     }
 }

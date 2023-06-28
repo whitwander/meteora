@@ -71,7 +71,9 @@
 }
 
 .produtos__mostra {
+    padding-bottom: 1.8em;
     margin: 2em;
+    border: 1px solid rgb(230, 229, 229);
 }
 
 .produtos__descrição {
@@ -83,6 +85,7 @@
 }
 
 .produtos__titulo {
+    font-size: 16px;
     font-weight: 700;
     margin: 1em 0;
 }
@@ -102,6 +105,7 @@
     text-decoration: none;
     color: var(--branco);
     padding: 0.5em 1em;
+    border: none;
 }
 
 @media screen and (max-width: 768px) {

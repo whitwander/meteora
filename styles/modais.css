@@ -1,0 +1,122 @@
+.modal__completo {
+    width: 100%;
+}
+
+.modal__cabeçalho {
+    background-color: var(--preto);
+    color: var(--branco);
+    padding: 1em;
+}
+
+.modal__cabeçalho-titulo {
+    display: flex;
+}
+
+.modal__titulo {
+    margin: 0.2em 0 0 1em;
+}
+
+.modal__botão-fechar {
+    background-image: url(/assets/bx-x.svg);
+}
+
+.modal__principal {
+    display: flex;
+}
+
+.formulário {
+    padding: 0.5em 2em;
+}
+
+.modal__titulo-descrição {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.modal__descrição {
+    font-size:13px;
+    font-weight: 300;
+    margin: 1.5em 0;
+    padding-bottom: 2em;
+    border-bottom: 1px solid rgb(184, 181, 181);
+}
+
+.modal__preço {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.modal__link {
+    color: gray;
+    font-size: 13px;
+}
+
+.titulo__seletores {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 2em;
+}
+
+.seletores {
+    margin-top: 1.5em;
+    font-size: 13px;
+    display: flex;
+    width: 100%;
+    justify-content:left;
+    gap: 30px;
+    border-bottom: 1px solid lightgray;
+}
+
+.seletores2 {
+    margin-top: 1.5em;
+    font-size: 13px;
+    display: flex;
+    width: 100%;
+    justify-content:left;
+    gap: 20px;
+}
+
+.seletores-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 1.5em;
+    
+}
+
+.botão__modal {
+    padding: 0.5em 1em;
+    background-color: var(--cor-link);
+    color: var(--branco);
+    border: none;
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 991px) {
+    .modal__principal {
+        flex-direction: column;
+    }
+
+    .modal__titulo {
+        font-size: 16px;
+        margin-top: 0.5em;
+    }
+    
+    .modal__completo {
+        width: 100%;
+    }
+
+    .formulário {
+        margin-top: 1em;
+    }
+
+    .modal__imagem {
+        width: 100%;
+    }
+}
+
+@media screen and(max-width: 425px) {
+    .modal__completo {
+        width: 100%;
+    }
+}

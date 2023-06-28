@@ -50,6 +50,36 @@
     font-size: 13px;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
+.cadastro__modal {
+    display: flex; 
+    justify-content: space-between;
+    background-color: black;  
+    padding: 0.3em;
+}
+
+.cadastro__modal-cabeçalho {
+    display: flex;
+    color: var(--branco);
+}
+
+.x {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+.cadastro__modal-desc {
+    background-color: var(--branco);
+    padding: 0.7em;
+    box-shadow: 1px 5px 27px -4px rgba(0,0,0,0.75);
+    border-radius: 0 0 7px 7px;
+    
+}
+
 @media screen and (max-width: 768px) {
     .cadastro {
         display: block;
