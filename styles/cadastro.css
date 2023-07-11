@@ -12,6 +12,7 @@
     flex-direction: column;
     text-align: center;
     grid-area: 1 / 2 / 2 / 3;
+    position: relative;
 }
 
 .cadastro__texto {
@@ -22,7 +23,8 @@
 
 .cadastro__input {
     width: 60%;
-    padding: 0.8em;
+    padding: 0.7em;
+    border: 1px solid gray;
     margin-bottom: 2em;
     margin-right: -0.4em;
 }
@@ -32,10 +34,10 @@
 }
 
 .cadastro__botão {
-    padding: 0.9em;
+    padding: 0.75em;
     color: var(--branco);
     background-color: var(--cor-link);
-    border: 1px solid var(--cor-link);
+    border: none;
     letter-spacing: 1.2px;
 }
 
@@ -50,15 +52,41 @@
     font-size: 13px;
 }
 
+.link-especial {
+    color: rgb(238, 255, 0);
+    font-size: 15px;
+    font-weight: 500;
+}
+
 .pointer {
     cursor: pointer;
+}
+
+.cadastro-modal {
+    width: 50%;
+    position: fixed;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 50%;
+    transition: 0.4s;
 }
 
 .cadastro__modal {
     display: flex; 
     justify-content: space-between;
+    align-items: center;
     background-color: black;  
     padding: 0.3em;
+    border-radius: 10px 10px 0 0;
+}
+
+.cadastro__modal-imagem {
+    margin-left: 1em;
+}
+
+.cadastro__modal-texto {
+    margin: 1em;
 }
 
 .cadastro__modal-cabeçalho {
@@ -75,9 +103,29 @@
 .cadastro__modal-desc {
     background-color: var(--branco);
     padding: 0.7em;
-    box-shadow: 1px 5px 27px -4px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 15px 1px rgba(0,0,0,0.75);
     border-radius: 0 0 7px 7px;
-    
+}
+
+.error-msg {
+    color: red;
+    font-size: 16px;
+    margin-bottom: -0.1em;
+    padding-bottom: 0.3em;
+}
+
+.cadastro__modal-desc-texto {
+    padding: 0em;
+    text-align: center;
+}
+
+span {
+    font-weight: 700;
+}
+
+.cadastro__botão:hover {
+    background-color: #40128B;
+    transition: .3s
 }
 
 @media screen and (max-width: 768px) {
@@ -92,6 +140,11 @@
     .cadastro__texto {
         margin: 2em;
     }
+
+    .cadastro-modal {
+        width: 70%;
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -101,5 +154,10 @@
 
     .cadastro__texto {
         margin: 1em;
+    }
+
+    .cadastro-modal {
+        width: 80%;
+        font-size: 13px;
     }
 }
