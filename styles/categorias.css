@@ -40,37 +40,14 @@
 
 .produtos__grid {
     display: grid;
-    grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-}
-
-.camiseta-grid {
-    grid-area: 1 / 2 / 2 / 3;
-}
-
-.calça-grid {
-    grid-area: 1 / 3 / 2 / 4;
-}
-
-.tênis-grid {
-    grid-area: 1 / 4 / 2 / 5;
-}
-
-.jaqueta-grid {
-    grid-area: 2 / 2 / 3 / 3;
-}
-
-.bolsa-grid {
-    grid-area: 2 / 3 / 3 / 4;
-}
-
-.óculos-grid {
-    grid-area: 2 / 4 / 3 / 5;
+    grid-column-gap: 0px;
+    margin: 0 8em;
 }
 
 .produtos__mostra {
+    width: 80%;
     padding-bottom: 1.8em;
     margin: 2em;
     border: 1px solid rgb(230, 229, 229);
@@ -150,35 +127,11 @@
     }
 
     .produtos__grid {
-        margin: 0 1em;
+        margin: 0 2em;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 10px;
-    }
-
-    .camiseta-grid {
-        grid-area: 1 / 1 / 2 / 2;
-    }
-
-    .calça-grid {
-        grid-area: 1 / 2 / 2 / 3;
-    }
-
-    .tênis-grid {
-        grid-area: 2 / 1 / 3 / 2;
-    }
-
-    .jaqueta-grid {
-        grid-area: 2 / 2 / 3 / 3;
-    }
-
-    .bolsa-grid {
-        grid-area: 3 / 1 / 4 / 2;
-    }
-
-    .óculos-grid {
-        grid-area: 3 / 2 / 4 / 3;
     }
 }
 
@@ -199,9 +152,10 @@
     .topicos-grid6 {
         width: 9em;
     }
-    
+
     .topicos-grid1 {
-        grid-area: 1 / 2 / 2 / 3;;
+        grid-area: 1 / 2 / 2 / 3;
+        ;
     }
 
     .topicos-grid2 {
