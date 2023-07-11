@@ -23,7 +23,7 @@
 
 .cadastro__input {
     width: 60%;
-    padding: 0.7em;
+    padding: 0.65em;
     border: 1px solid gray;
     margin-bottom: 2em;
     margin-right: -0.4em;
@@ -124,7 +124,7 @@ span {
 }
 
 .cadastro__botão:hover {
-    background-color: #40128B;
+    background-color: #4a3869;
     transition: .3s
 }
 
