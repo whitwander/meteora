@@ -5,11 +5,12 @@ getPodutos()
 
 async function getPodutos() {
     const resp = await fetch(endApi)
-    produtos = await resp.json()
+    produtos = await resp.json() 
     exibirProdutos(produtos)
 }
 
 function exibirProdutos(lista) {
+    elementoHtml.innerHTML = ''
     lista.forEach(produto => {
         elementoHtml.innerHTML += `
         <div class="produtos__mostra">
