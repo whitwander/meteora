@@ -19,9 +19,11 @@ function exibirProdutos(lista) {
                 <h3 class="produtos__titulo">${produto.titulo}</h3>
                 <p class="produtos__texto">${produto.descricao}</p>
                 <p class="produtos__preço">R$ ${produto.preco}</p>
-                <button class="produtos__link">Ver mais</button>
+                <button type="submit" class="produtos__link">Ver mais</button>
             </div>
         </div>
         `
+        return consultaBotao()
     })
+    
 }
