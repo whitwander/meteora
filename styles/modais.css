@@ -4,7 +4,7 @@
 
 .modal-produtos {
     position: fixed;
-    width: 50%;
+    width: 40%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -136,31 +136,65 @@
     background-color: rgb(248, 222, 222);  
 }
 
+
+@media screen and (max-width: 1440px) {
+    .modal-produtos {
+        width: 70%;
+    }
+}
+
 @media screen and (max-width: 991px) {
+    .modal-produtos {
+        width: 50%;
+        top: 50%;
+    }
+
+    .modal__descrição {
+        padding-bottom: 0.5em;
+    }
+    
+    .modal__descrição,
+    .modal__link,
+    .seletores,
+    .titulo__seletores,
+    .seletores2,
+    .botão__modal {
+        margin: 0.5em 0;
+    }
+
+    .seletores-items {
+        padding-bottom: 0;
+    }
+    
     .modal__principal {
         flex-direction: column;
     }
 
+    .modal__cabeçalho {
+        padding: 0.5em;
+    }
+
     .modal__titulo {
         font-size: 16px;
-        margin-top: 0.5em;
+        margin-top: 0.2em;
     }
-    
-    .modal__completo {
-        width: 100%;
+
+    .modal__imagem {
+        width: 60%;
+        margin-left: 3em;
+    }
+
+    .botão__modal {
+        margin: 0;
     }
 
     .formulário {
         margin-top: 1em;
     }
-
-    .modal__imagem {
-        width: 100%;
-    }
 }
 
-@media screen and(max-width: 425px) {
-    .modal__completo {
-        width: 100%;
+@media screen and (max-width: 425px) {
+    .modal-produtos {
+        width: 80%;
     }
 }
