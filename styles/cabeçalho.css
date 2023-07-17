@@ -10,6 +10,11 @@
     padding: 0.5em 1.5em;
 }
 
+.active {
+    color:  #DAFF01!important;
+    font-size: 17px;
+}
+
 .cabeçalho__logo {
     margin-right: auto;
 }
@@ -19,6 +24,7 @@
     color: var(--branco);
     padding: 1.5em;
     position: relative;
+    transition: 0.2s;
 }
 
 .cabeçalho__input {
@@ -42,6 +48,11 @@
 .menu,
 .pesquisa__mobile {
     display: none;
+}
+
+.cabeçalho__item:hover {
+    color: #DAFF01;
+    font-size: 17px;
 }
 
 

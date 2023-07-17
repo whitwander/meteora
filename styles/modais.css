@@ -126,9 +126,10 @@
 
 .hide-modal {
     opacity: 0;
-    top: 0!important;
+    top: -10!important;
     right: 0!important;
     transition: 0.4s;
+    z-index: -1;
 }
 
 .erro {
